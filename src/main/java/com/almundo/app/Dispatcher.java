@@ -1,20 +1,20 @@
 package com.almundo.app;
 
-import java.util.concurrent.PriorityBlockingQueue;
+import java.util.PriorityQueue;
 
 public class Dispatcher {
 
-    PriorityBlockingQueue<Employee> employees;
+    PriorityQueue<Employee> employees;
 
-    public Dispatcher(PriorityBlockingQueue<Employee> employees) {
+    public Dispatcher(PriorityQueue<Employee> employees) {
         this.employees = employees;
     }
 
-    public PriorityBlockingQueue<Employee> getEmployees() {
+    public PriorityQueue<Employee> getEmployees() {
         return employees;
     }
 
-    public void setEmployees(PriorityBlockingQueue<Employee> employees) {
+    public void setEmployees(PriorityQueue<Employee> employees) {
         this.employees = employees;
     }
 
