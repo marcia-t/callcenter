@@ -1,6 +1,5 @@
 package com.almundo.app;
 
-import java.util.PriorityQueue;
 
 /**
  * This class represents the employee entity
@@ -39,11 +38,19 @@ public class Employee  implements Comparable<Employee>{
         this.dispatcher = dispatcher;
     }
 
+    /**
+     * It compares the employees according to its enum type. Uses compareTo from the enum order.
+     * @param employee
+     * @return
+     */
     @Override
     public int compareTo(Employee employee) {
         return this.type.compareTo(employee.type);
     }
 
+    /**
+     * Puts itself into the working queue in the dispatcher to be able to receive another call
+     */
     public void finishCall(){
         this.dispatcher.addEmployee(this);
     }

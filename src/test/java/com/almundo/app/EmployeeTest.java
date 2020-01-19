@@ -1,7 +1,6 @@
 package com.almundo.app;
 
 import org.junit.Test;
-import org.mockito.Mockito;
 
 import static org.junit.Assert.*;
 

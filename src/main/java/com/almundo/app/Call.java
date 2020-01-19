@@ -1,6 +1,11 @@
 package com.almundo.app;
 import java.util.concurrent.ThreadLocalRandom;
 
+
+/**
+ * This class represents the call entity
+ * It responsibility is to execute the task of the calls inside the dispatcher thread, that's why it implements 'Runnable'
+ */
 public class Call implements Runnable {
 
     Employee employee;
@@ -18,11 +23,18 @@ public class Call implements Runnable {
         return duration;
     }
 
+    /**
+     * when a call starts, it sets its duration between 5 and 10 secs.
+     */
     public void setDuration() {
         int duration = ThreadLocalRandom.current().nextInt(5, 11);
         this.duration = duration;
     }
 
+    /**
+     * This is the task that will execute from the dispatcher
+     * Once it finishes, it tells the employee to go back to the queue
+     */
     @Override
     public void run() {
         this.setDuration();

@@ -11,6 +11,8 @@ public class App
 {
     public static void main( String[] args ) throws InterruptedException {
 
+        /*
+        * In this example, we'll have 5 employees, and the dispatcher will receive 20 calls.*/
         List<Employee> l = new ArrayList<>();
         for (int i = 0; i < 2; i++) {
             l.add(new Employee(i, Employee.Type.OPERATOR));

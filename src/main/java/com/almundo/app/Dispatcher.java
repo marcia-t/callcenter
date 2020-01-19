@@ -43,12 +43,19 @@ public class Dispatcher {
         return e;
     }
 
+    /**
+     * This method receive the call, takes an employee from the priority queue and submit a task to the service
+     * @param call
+     */
     public void dispatchCall(Call call){
         Employee e = this.getEmployee();
         call.setEmployee(e);
         service.submit(call);
     }
 
+    /**
+     * Shutdown the dispatcher
+     */
     public void stop(){
         service.shutdown();
     }
