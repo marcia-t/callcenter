@@ -34,7 +34,13 @@ public class Dispatcher {
     }
 
     public Employee getEmployee(){
-        Employee e = employees.poll();
+        Employee e = null;
+        try {
+            e = employees.take();
+        } catch (InterruptedException ex) {
+            System.out.println("Error taking employee");
+            ex.printStackTrace();
+        }
         return e;
     }
 

@@ -10,7 +10,6 @@ import java.util.List;
 public class App 
 {
     public static void main( String[] args ) throws InterruptedException {
-        System.out.println( "Hello World!" );
 
         List<Employee> l = new ArrayList<>();
         for (int i = 0; i < 2; i++) {
@@ -27,9 +26,9 @@ public class App
 
         Dispatcher callCenter = new Dispatcher(l);
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 20; i++) {
             Call c = new Call();
-            Thread.sleep(1000);
+            Thread.sleep(500);
             callCenter.dispatchCall(c);
         }
         callCenter.stop();

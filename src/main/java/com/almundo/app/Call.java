@@ -21,18 +21,18 @@ public class Call implements Runnable {
         return duration;
     }
 
-    public void setDuration(double duration) {
+    public void setDuration() {
+        int duration = ThreadLocalRandom.current().nextInt(5, 11);
         this.duration = duration;
     }
 
 
     @Override
     public void run() {
-        int duration = ThreadLocalRandom.current().nextInt(5, 11);
-        this.setDuration(duration);
+        this.setDuration();
         try {
-            System.out.println("Call from "+this.employee.id+" starts. It's a "+this.employee.type);
-            Thread.sleep(duration*1000);
+            System.out.println("Call from "+this.employee.id+" starts. It's a(n) "+this.employee.type);
+            Thread.sleep((long)this.duration*1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
