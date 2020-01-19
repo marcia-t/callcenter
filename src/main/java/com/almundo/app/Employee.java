@@ -23,8 +23,6 @@ public class Employee  implements Comparable<Employee>{
         this.type = type;
     }
 
-
-
     public int getId() {
         return id;
     }
@@ -49,5 +47,4 @@ public class Employee  implements Comparable<Employee>{
     public void finishCall(){
         this.dispatcher.addEmployee(this);
     }
-
 }
