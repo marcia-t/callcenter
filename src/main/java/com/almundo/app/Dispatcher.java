@@ -44,7 +44,7 @@ public class Dispatcher {
     }
 
     /**
-     * This method receive the call, takes an employee from the priority queue and submit a task to the service
+     * This method receives the call, takes an employee from the priority queue and submits a task to the service
      * @param call
      */
     public void dispatchCall(Call call){
